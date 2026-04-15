@@ -1,0 +1,229 @@
+﻿BIÊN BẢN TỔNG KẾT 
+CUỘC HỌP REVIEW 01 - PHẦN MỀM QUẢN LÝ HỘI VIÊN 
+
+
+* Thời gian:  Từ 10:00 AM đến 11:30 AM, ngày 07/04/2026
+* Địa điểm: Phòng họp Văn phòng HAWA, 41 đường số 7, Khu đô thị Vạn Phúc, Phường Hiệp Bình, TP.HCM
+* Thành phần tham dự: Nguyễn Phi Long, Trần Thị Kim, Hà Quyên, Thùy Ngân, Cường IT
+* Người review: Cường IT
+* Nội dung: Góp ý về các chức năng của Module 1: Danh bạn Hội viên và Module 2: Hội phí. Trong đó, quy chế thu Hội phí là điểm quan trọng nhất.
+
+
+Tóm tắt nội dung chi tiết:
+1. Các chính sách chuẩn về Hội phí (Hầu như không thay đổi)
+Mức Hội phí áp dụng cho năm 2026 trở về trước cho các Khối ngành nghề dịch vụ như sau:
+TT
+	Khối 
+ngành nghề dịch vụ
+	Mức đóng 
+hội phí
+VNĐ/năm
+	Chính sách giảm giá hội phí cho Hội viên tham gia nhiều kỳ liên tiếp
+	1
+	Thủ công mỹ nghệ
+	2.000.000
+	
+
+- Giảm 10% cho Hội viên đóng Hội phí 2 năm liên tiếp
+- Giảm 15% cho Hội viên đóng Hội phí 3 năm liên tiếp
+
+
+Lệ phí gia nhập lần đầu tiên là: 1.000.000 VNĐ
+	2
+	Chế biến gỗ
+	5.000.000
+	3
+	Thương mại
+	5.000.000
+	4
+	Dịch vụ
+	5.000.000
+	
+
+Khi áp dụng chính sách giảm giá hội phí khi Hội viên tham gia liên tiếp nhiều kỳ:
+→  Hội phí từng năm sẽ được chia đều ra:
+Ví dụ: Hội viên A thuộc Khối Chế biến gỗ đóng Hội phí 3 năm liên tiếp là 2024, 2025, 2026
+        → Tổng chi phí đóng khi được giảm giá:  5.000.000 x 3 (năm) x 85% = 12.750.000 VNĐ
+        →  Phần hiển thị thông tin đóng Hội phí của công ty A trong các năm 2024, 2025, 2026 sẽ là: 
+                  12.750.000 : 3 = 4.250.000 VNĐ. Đồng thời hiển thị Ghi chú là (Đóng hội phí 03 năm liên tiếp)
+     - Tương tự như vậy cho trường hợp Hội viên đóng 02 năm liên tiếp.
+
+
+2. Góp ý chi tiết hơn về Module 2: Thống nhất quy tắt cốt lõi
+Đây là trọng tâm của cuộc họp để giải quyết các trường hợp "cảm tính" trong việc thu phí trước đây. Các bên đã thống nhất các quy tắc sau để đưa vào code phần mềm:
+
+
+Thời điểm thu phí (Chu kỳ tính phí)
+- Hội viên cũ (gia nhập từ 2024 trở về trước) và Hội viên mới gia nhập trước tháng 6/2025: 
+Mặc định thu đồng loạt vào **tháng 3 hàng năm**.
+Hội viên gia nhập từ tháng 6 đến tháng 10 năm 2025: 
+Thu phí đúng vào thời điểm/tháng họ gia nhập của năm tiếp theo.
+  
+Hội viên gia nhập vào tháng 11, tháng 12:  Được "du di", hệ thống sẽ miễn thu phí của năm liền kề tiếp theo (hưởng 14 tháng).
+
+
+Dữ liệu hội viên cũ không rõ ngày gia nhập:
+Chị Kim sẽ phụ trách rà soát lại hồ sơ cũ và tự điền/ước lượng một ngày tham gia hợp lý (ví dụ dựa trên năm tham gia Ban chấp hành) để hệ thống có mốc thời gian cảnh báo nợ.
+
+
+Chính sách chiết khấu:
+Có hỗ trợ ghi nhận việc đóng phí nhiều năm liên tục (VD: đóng 2, 3 năm) và hệ thống có khả năng tự động chia ra số tiền thực đóng/chiết khấu mỗi năm. Nhóm trường học/đào tạo được áp dụng mức phí riêng là 2 triệu đồng.
+
+
+Quản lý nợ xấu:
+Các hội viên nợ phí trên 18 tháng hoặc 2 năm sẽ không bị xóa tên ngay lập tức mà hệ thống sẽ "báo đỏ", chuyển sang diện nợ xấu để bộ phận kế toán và hội viên biết.
+
+
+Cảnh báo & Gửi thông báo:
+ Phần mềm sẽ có chức năng thiết lập thời gian cảnh báo nợ trước 30-45 ngày. Hỗ trợ xuất mẫu thông báo nợ (có thể đính kèm file) và mở form gửi email trực tiếp từ hệ thống đến hội viên.
+
+
+3. Từ góp ý thì IT đưa ra bản Quy chế để coding như sau
+Ngoài theo Quy định về mức đóng hội phí hàng năm và chính sách giảm giá, Hội còn áp dụng các quy chế như sau:
+
+
+  
+
+
+
+Trường hợp 1: Nếu ngày Gia nhập và đóng Hội phí rơi vào các ngày của Tháng 01, 02, 03, 04, 05, 06, 07, 09, 09, 10:
+ Ngày đóng Hội phí = Ngày Ký quyết định gia nhập = Ngày tính hạn Hội viên theo từng năm.
+   VD: Hội viên đóng Hội phí (cho một năm) lần đầu và có quyết định gia nhập Hội vào ngày 05/05/2025 thì vào ngày này của năm 2026 sẽ hết hạn Hội viên → Cần phải gia hạn → Hệ thống cảnh báo thu nợi hội phí trước 45 ngày.  
+
+
+Trường hợp 2: - Hội viên gia nhập đóng Hội phí lần đầu tiên vào các ngày của Tháng 11, Tháng 12 của năm thì được tính như sau:
++ Miễn Hội phí 02 tháng là tháng 11 và tháng 12 của năm đó
++ Ghi nhận ngày tham gia Hội là ngày đóng hội phí lần đầu tiên này
++ Được tính là đã đóng Hội phí của năm tiếp theo
++ Khi tính gia hạn hội phí thì tính ngày gia hạn là 01/01/ của năm tiếp theo nữa
+Ví dụ: Công ty A đăng kí gia nhập và đóng hội phí vào 05/11/2025 thì:
+* Tháng 11 và tháng 12 của năm 2025, công ty A được miễn Hội phí
+* Hệ thống ghi nhận ngày tham gia Hội của Công ty A là ngày 05/11/2025
+* Năm 2026, công ty A đã được ghi nhận là đóng hội phí cho năm 2026
+* Hạn đóng Hội phí tiếp theo của công ty A năm 2027 là 01/01/2027
+→ Trường hợp nay sẽ tính Hạn đóng Hội phí khác với ngày tham gia Hội.
+
+
+- Cảnh báo của Hệ thống nhắc nợ:
+STT
+	Tên cảnh báo
+	Ghi chú
+	
+
+	1
+	Hạn Hội viên còn 45 ngày
+	Cảnh báo hết hạn Hội viên trong năm
+	
+
+	2
+	Nhắc thu nợ tháng 03
+	Cảnh báo nhắc nợ đồng loạt vào tháng 03 hàng năm
+	Gửi email hàng loạt
+	3
+	Nhắc thu nợ tháng 06
+	Cảnh báo nhắc nợ đồng loạt vào tháng 06 hàng năm
+	Gửi email hàng loạt
+	4
+	Nhắc thu nợ tháng 09
+	Cảnh báo nhắc nợ đồng loạt vào tháng 09 hàng năm
+	Gửi email hàng loạt
+	6
+	Nợ 18 tháng - 2 năm
+	Hội viên từ (=) 18 đến 24 tháng nợ Hội phí
+	Theo Điều lệ, Hội viên không tham gia Hội 18 tháng sẽ được nhắc nhở, nếu muốn rời hội thì làm đơn rời hội.
+	7
+	Nợ xấu
+	Hội viên trên (>) 2 năm chưa đóng Hội phí
+	Không tự động chuyển sang trạng thái Tạm ngưng.
+Trạng thái tạm ngưng do user vận hành Bật / Tắt
+	8
+	Nợ rất xấu
+	Hội viên Từ (>=) 5 năm chưa đóng Hội phí
+	Không tự động chuyển sang trạng thái Tạm ngưng.
+Trạng thái tạm ngưng do user vận hành Bật / Tắt
+	
+
+Trường hợp các Hội viên không nhớ ngày gia nhập Hội thì xuất hết dữ liệu đưa chị Kim, chị Kim sẽ bổ sung.
+
+
+4. Các góp ý khác:
+- Mở thêm trạng thái Hội viên: bao gồm 05 trạng thái
+
+
+Tên trạng thái
+	Mô tả
+	Màu hiển thị
+	Hoạt động
+	
+
+	Xanh lá cây
+	Ngừng hoạt động
+	
+
+	Xám
+	Đang xét duyệt gia nhập
+	
+
+	Xanh dương
+	Đang xét duyệt rời hội
+	
+
+	Cam
+	Tạm ngưng
+	
+
+	Đỏ
+	
+
+Ghi chú: 
+- Trạng thái hoạt động của Hội viên là trạng thái hoạt động của Hội viên trong Hội, không liên quan đến các vấn đề về Công ty đã ngừng hoạt động / không ngừng hoạt động. Nếu Công ty là Hội viên này đã ngừng hoạt động (đóng Mã số thuế). → Chỉ quản lý trong phạm vi Hội HAWA
+
+
+Thêm chức năng này vào phần quản lý thông tin chi tiết của Hội viên
+-  Dashboard Hội viên: Có thêm chức năng chọn để Ẩn / Hiển thị các cột dữ liệu
+
+
+Có thêm trường Email (Nút Email), có thể bấm vào để hiện Template được gán sẵn Nội dung nhắc nợ (có thể sửa được) và nút gửi email.
+Email sẽ làm một email chung của Hội (sẽ lấy email info@hawa.org.vn hoặc email hoiphi@hawa.org.vn)
+
+
+→ Nâng cấp (có thể nghiên cứu): Hệ thống gửi email tự động hàng loạt (cùng Template)
+
+
+→ Nâng cấp hơn (có thể nghiên cứu): Hệ thống gửi email tự động hàng loạt bằng AI: Có thể sửa chữa các thông tin khác nhau, tự chỉnh sửa temlplate phù hợp với nội dung cần gửi.
+
+
+→ Đưa AI vào truy vấn, hỏi đáp tất cả các dữ liệu liên quan về Hội viên.
+
+
+5. Định hướng về triển khai hệ thống lâu dài
+- Vấn đề của hệ thống hiện tại:
+Hệ thống Bitrix hiện tại tích hợp quá nhiều thứ (finance, công việc, v.v.) dẫn đến dữ liệu hội viên bị rối, khó xuất báo cáo công nợ chính xác.
+- Rủi ro vận hành:
+ Chị Kim lo ngại phần mềm tự code in-house nếu sau này Cường không làm nữa thì người khác không vận hành được, lặp lại vết xe đổ lãng phí như các phần mềm trước đây.
+- Giải pháp xử lý:
+ Anh Long nhấn mạnh cần làm rõ các vấn đề về sở hữu trí tuệ và tài sản phần mềm của hội để đảm bảo vận hành lâu dài. Trước mắt, chỉ tập trung hoàn thiện thật tốt 2 vấn đề cấp bách: **Danh bạ** và **Hội phí**, chạy thử nghiệm cho trơn tru rồi mới tính tiếp việc có đấu nối/thay thế hoàn toàn hệ thống cũ hay không.
+→ Hướng xử lý của IT: IT Sẽ dựng một AI để trả lời tất cả các câu hỏi liên quan đến hệ thống hiện tại của HAWA, trong đó sẽ chỉ rõ và so sánh cặn kẽ các vấn đề đăng gặp phải của hệ thống hiện tại, ưu điểm, nhược điểm,...
+
+
+6. Kết luận và phân công công việc
+Việc thu phí hiện hành:  Bạn Tâm vẫn tiếp tục gửi email thông báo thu phí thủ công theo tiến độ hiện tại, không chờ phần mềm hoàn thiện.
+Chuẩn bị báo cáo cho Ban 6 (Dự kiến ngày 10/4)
+- Ngân, Chị Kim, Chị Xuyến:  Chuẩn bị slide báo cáo tổng hợp về tình hình hội viên hiện tại.
+- Anh Long và Cường: Cung cấp hình ảnh demo cho các  slide và nội dung trình bày (demo) về lý do cần áp dụng phần mềm mới, tiến độ xây dựng và cách vận hành.
+Hoàn thiện phần mềm:    IT Cường tiếp tục code và thiết lập các rule (quy tắc) thu phí đã thống nhất ở trên để tạo ra bản demo hoàn chỉnh nhất trước khi áp dụng thực tế.
+
+
+Thành phố Hồ Chí Minh, ngày 09 tháng 04 năm 2026
+
+
+        CHÁNH VĂN PHÒNG                                           Ghi biên bản và tổng hợp
+
+
+
+
+
+
+
+
+             NGUYỄN PHI LONG                                                                Trần Tuấn Cường
